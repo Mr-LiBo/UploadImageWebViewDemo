@@ -3,7 +3,7 @@
 > 安卓APP的WebView默认屏蔽了&lt;input type="file"&gt;该控件的使用，需要通过java代码实现WebView内拍照、选择相册图片。
 
 ## Get Start
-新建一个Activity extends WebViewActivity，并且实现WebViewActivity的抽象方法public abstract String getUrl();
+新建一个Activity extends WebViewActivity，并且实现WebViewActivity的抽象方法public abstract String setUrl();
 
 ### 添加权限Permissions
 ```xml
