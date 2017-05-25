@@ -25,7 +25,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,7 +41,7 @@ public abstract class WebViewActivity extends AppCompatActivity {
     private ValueCallback<Uri[]> mUploadMessageArray;
     private final static int IMAGE_CHOOSE_REQUEST_CODE = 102;
 
-    public abstract String getUrl();
+    public abstract String setUrl();
 
     @SuppressLint({"SetJavaScriptEnabled", "WrongViewCast"})
     @Override
@@ -52,7 +51,7 @@ public abstract class WebViewActivity extends AppCompatActivity {
         mWebView = new WebView(getApplicationContext());
         rl.addView(mWebView);
         setContentView(rl);
-        mUrlString = getUrl();
+        mUrlString = setUrl();
 
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M

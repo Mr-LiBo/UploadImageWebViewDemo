@@ -10,7 +10,7 @@ public class TestActivity extends WebViewActivity
 {
 
     @Override
-    public String getUrl() {
+    public String setUrl() {
         Intent intent = getIntent();
         return intent.getStringExtra(WebViewActivity.URL_EXTRA_NAME_STR);
     }
