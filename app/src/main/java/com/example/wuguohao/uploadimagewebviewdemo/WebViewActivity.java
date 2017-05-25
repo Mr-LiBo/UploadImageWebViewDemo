@@ -47,8 +47,8 @@ public abstract class WebViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RelativeLayout rl = new RelativeLayout(getApplicationContext());
-        mWebView = new WebView(getApplicationContext());
+        RelativeLayout rl = new RelativeLayout(WebViewActivity.this);
+        mWebView = new WebView(WebViewActivity.this);
         rl.addView(mWebView);
         setContentView(rl);
         mUrlString = setUrl();
